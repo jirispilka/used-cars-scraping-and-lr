@@ -1,6 +1,6 @@
 """
 Download ads from  sauto.cz
-Iteratively browse the advertisements and save the complete pages.
+Iteratively browse advertisements and save the complete pages.
 
 @author: jirka
 """
