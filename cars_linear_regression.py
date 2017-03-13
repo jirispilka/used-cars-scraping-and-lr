@@ -3,9 +3,9 @@ import seaborn as sns
 import numpy as np
 import sys
 
-sfile = 'octavia_cars_2017-03.csv'
+csv_file = 'octavia_cars_2017-03.csv'
 
-df = pd.read_csv(sfile)
+df = pd.read_csv(csv_file)
 
 print(df.describe())
 

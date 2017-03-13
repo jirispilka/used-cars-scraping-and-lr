@@ -19,8 +19,8 @@ import random
 URL = 'http://www.sauto.cz/osobni/hledani#!category=1&condition=1&condition=2&condition=4&fuel=2&subCategory=6&manu' \
       'facturer=93&model=705&page=142'
 
-FILE_PREFIX = 'octavia_2017-03'
-OUTPUT_DIR = 'data_html_temp'
+file_prefix = 'octavia_2017-03'
+data_dr = 'data_html_temp'
 
 
 class DownloadAds:
@@ -30,8 +30,8 @@ class DownloadAds:
         parsed_args = self.parse_cmd_args()
 
         self._web_url = URL if parsed_args.url is None else parsed_args.url
-        self._fileprefix = FILE_PREFIX if parsed_args.file_prefix is None else parsed_args.file_prefix
-        self._outputdir = OUTPUT_DIR if parsed_args.output_dir is None else parsed_args.output_dir
+        self._fileprefix = file_prefix if parsed_args.file_prefix is None else parsed_args.file_prefix
+        self._outputdir = data_dr if parsed_args.output_dir is None else parsed_args.output_dir
 
         self._wait_page_load = .5  # gives implicit wait for loading page
 
@@ -80,10 +80,10 @@ class DownloadAds:
 
         sname = '{:}_{:03}.html'.format(self._fileprefix, cnt)
 
-        if not os.path.exists(OUTPUT_DIR):
-            os.makedirs(OUTPUT_DIR)
+        if not os.path.exists(data_dr):
+            os.makedirs(data_dr)
 
-        sname = os.path.join(OUTPUT_DIR, sname)
+        sname = os.path.join(data_dr, sname)
 
         with open(sname, 'w') as fr:
             fr.write(page.encode('utf-8'))

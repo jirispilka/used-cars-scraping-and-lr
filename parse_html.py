@@ -11,10 +11,10 @@ import glob
 
 DEBUG = False
 
-sdir = 'data_html_temp'
-out_file = 'octavia_cars_2017-03.csv'
+data_dir = 'data_html_temp'
+csv_file = 'octavia_cars_2017-03.csv'
 
-files = glob.glob('data_html_temp/*.html')
+files = glob.glob(data_dir + '/*.html')
 files.sort()
 
 print('Source files:')
@@ -91,7 +91,7 @@ for k, sfile in enumerate(files):
         cars.append([sname, displacement, year, mileage, price])
 
 # write the file
-with open(out_file, 'w+') as fw:
+with open(csv_file, 'w+') as fw:
 
     fw.write('text,displacement,year,mileage,price\n')
 
