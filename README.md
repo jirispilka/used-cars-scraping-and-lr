@@ -26,7 +26,15 @@ pip install numpy selenium beautifulsoup pandas seaborn argparse
 
 Download the Selenium Standalone Server: http://www.seleniumhq.org/download
 
+Donwload Chrome driver: https://sites.google.com/a/chromium.org/chromedriver/ and add it somewhere into PATH, e.g. to ~/.local/bin:
+
+
 ### Usage
+
+Start the Selenium Server:
+```
+java -jar selenium-server-standalone-3.3.0.jar &
+```
 
 I was a bit lazy, hence in each file below you need to setup several variables 
 
@@ -54,3 +62,4 @@ Plot linear regression:
 ```
 python cars_linear_regression.py
 ```
+
