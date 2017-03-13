@@ -17,7 +17,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import random
 
 URL = 'http://www.sauto.cz/osobni/hledani#!category=1&condition=1&condition=2&condition=4&fuel=2&subCategory=6&manu' \
-      'facturer=93&model=705&page=1'
+      'facturer=93&model=705&page=142'
 
 FILE_PREFIX = 'octavia_2017-03'
 OUTPUT_DIR = 'data_html_temp'
@@ -47,7 +47,7 @@ class DownloadAds:
         time.sleep(self._wait_page_load)
 
         b_continue = True
-        cnt = 0
+        cnt = 141
 
         while b_continue:
 
@@ -65,7 +65,7 @@ class DownloadAds:
                 element.click()
 
                 # another wait. For some reason it was not working without this
-                val = random.randint(10, 100)/float(10)
+                val = random.randint(20, 100)/float(10)
                 print('Waiting time: %2.2f' % val)
                 time.sleep(val)
 

@@ -9,7 +9,7 @@ import re
 from bs4 import BeautifulSoup
 import glob
 
-DEBUG = True
+DEBUG = False
 
 sdir = 'data_html_temp'
 out_file = 'octavia_cars_2017-03.csv'
@@ -23,7 +23,9 @@ print(len(files))
 
 cars = list()
 
-for sfile in files:
+for k, sfile in enumerate(files):
+
+    print('processed files: {0}/{1}'.format(k, len(files)))
 
     with open(sfile, 'r') as fr:
         soup = BeautifulSoup(fr, 'lxml')
@@ -83,15 +85,15 @@ for sfile in files:
 
                 if DEBUG:
                     print("text = " + stext)
-            else:
-                print dd
+            # else:
+            #     print dd
 
         cars.append([sname, displacement, year, mileage, price])
 
 # write the file
 with open(out_file, 'w+') as fw:
 
-    fw.write('text, displacement, year, mileage, price\n')
+    fw.write('text,displacement,year,mileage,price\n')
 
     for s, d, y, m, p in cars:
         fw.write('{0},{1},{2},{3},{4}\n'.format(s, d, y, m, p))
