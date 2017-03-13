@@ -36,7 +36,7 @@ Start the Selenium Server:
 java -jar selenium-server-standalone-3.3.0.jar &
 ```
 
-I was a bit lazy, hence in each file below you need to setup several variables 
+I was a bit lazy, hence in each file below you need to setup several variables.
 
 To download ads:
 
