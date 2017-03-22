@@ -10,12 +10,13 @@ Simple linear regression on mileage and price
 
 * Python (>= 2.7 or >= 3.3)
 * Selenium
-* Selenium Standalone server
 * NumPy
 * BeautifulSoup
 * Pandas
 * Seaborn
 * argparse
+
+[comment]: <> (* Selenium Standalone server)
 
 ### Installation
 
@@ -24,17 +25,17 @@ If you have pip installed just type
 pip install numpy selenium beautifulsoup pandas seaborn argparse
 ```
 
-Download the Selenium Standalone Server: http://www.seleniumhq.org/download
+[comment]: <> (Download the Selenium Standalone Server: http://www.seleniumhq.org/download)
 
 Donwload Chrome driver: https://sites.google.com/a/chromium.org/chromedriver/ and add it somewhere into PATH, e.g. to ~/.local/bin:
 
 
 ### Usage
 
-Start the Selenium Server:
-```
-java -jar selenium-server-standalone-3.3.0.jar &
-```
+[comment]: <> (Start the Selenium Server:)
+[comment]: <> (```)
+[comment]: <> (java -jar selenium-server-standalone-3.3.0.jar &)
+[comment]: <> (```)
 
 I was a bit lazy, hence in each file below you need to setup several variables.
 

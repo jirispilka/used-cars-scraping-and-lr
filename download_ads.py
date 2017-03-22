@@ -101,12 +101,12 @@ class DownloadAds:
 if __name__ == '__main__':
 
     # prepare
-    try:
-        os.system("Xvfb :42 -ac -screen 0 1000x1200x30 &")
-        os.system("export DISPLAY=:42")
-        os.system("java -jar selenium-server-standalone-3.3.0.jar &")
-    except:
-        print('Selenium error')
+    # try:
+    #     os.system("Xvfb :42 -ac -screen 0 1000x1200x30 &")
+    #     os.system("export DISPLAY=:42")
+    #     os.system("java -jar selenium-server-standalone-3.3.0.jar &")
+    # except:
+    #     print('Selenium error')
 
     main = DownloadAds(sys.argv)
     main.run()
